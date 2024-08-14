@@ -1,6 +1,6 @@
 # Perfect Jame Team Ever TEAM
 
-Welcome to the official repository for **[Perfect Jame Team Ever]**! This project was created during [Name of the Game Jam] by a passionate and talented team. Below, you'll find an introduction to our team members and their respective roles.
+Welcome to the official repository for **[Perfect Jame Team Ever]**! This project was created during GMTK by a passionate and talented team. Below, you'll find an introduction to our team members and their respective roles.
 
 ## Team Members
 
@@ -18,7 +18,7 @@ Welcome to the official repository for **[Perfect Jame Team Ever]**! This projec
 
 - **[Jason]** - Writer
 
-  - **[Jaker]** - Music Composer
+- **[Jaker]** - Music Composer
 
 ### 🎮 **Designers**
 

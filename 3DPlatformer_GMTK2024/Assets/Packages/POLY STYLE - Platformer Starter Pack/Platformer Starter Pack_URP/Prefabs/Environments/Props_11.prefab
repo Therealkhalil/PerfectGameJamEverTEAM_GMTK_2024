@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2064304813652253528}
   - component: {fileID: 5776725971262020310}
   - component: {fileID: 6354781564834684737}
+  - component: {fileID: 250359658936295578}
+  - component: {fileID: 6028357427951816386}
   m_Layer: 0
   m_Name: Props_11
   m_TagString: Untagged
@@ -106,3 +108,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 0.22647041, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &250359658936295578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7195035819186706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed970f0c984cf6a49ac2d9e188e7dc31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  loopable: 1
+  duration: 2
+--- !u!114 &6028357427951816386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7195035819186706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c4c0645c8c3834eb7004facf97b7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

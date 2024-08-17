@@ -1,3 +1,4 @@
+ using System.Collections;
  using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
@@ -19,7 +20,7 @@ namespace StarterAssets
         public float MoveSpeed = 2.0f;
 
         [Tooltip("Sprint speed of the character in m/s")]
-        public float SprintSpeed = 5.335f;
+        public float AccerlateSpeed = 4.0f;
 
         [Tooltip("How fast the character turns to face movement direction")]
         [Range(0.0f, 0.3f)]
@@ -74,6 +75,14 @@ namespace StarterAssets
 
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
+        
+        /// <summary>
+        /// New Detail of movement
+        /// </summary>
+        [Header("New Movement")]
+        public float DashTime = 1.0f;
+        public float DashSpeed = 3.0f;
+        private bool isDash = false;
 
         // cinemachine
         private float _cinemachineTargetYaw;
@@ -154,6 +163,8 @@ namespace StarterAssets
 
         private void Update()
         {
+            if (isDash) {return;}
+            
             _hasAnimator = TryGetComponent(out _animator);
 
             JumpAndGravity();
@@ -214,17 +225,21 @@ namespace StarterAssets
         private void Move()
         {
             // set target speed based on move speed, sprint speed and if sprint is pressed
-            float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
-
-            // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
-
+            // float targetSpeed = _input.sprint ? AccerlateSpeed : MoveSpeed;
+            
+            // Use this for natural movement - @POTO
+            float targetSpeed = AccerlateSpeed;
+            
             // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
             // if there is no input, set the target speed to 0
-            if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+            if (_input.move == Vector2.zero)
+            {
+                targetSpeed = 0.0f;
+            }
 
             // a reference to the players current horizontal velocity
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
-
+  
             float speedOffset = 0.1f;
             float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
 
@@ -264,21 +279,35 @@ namespace StarterAssets
                 transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
             }
 
-
             Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
 
             // move the player
             _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
                              new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
-
-            // update animator if using character
-            if (_hasAnimator)
+            
+            // Dash
+            if (_input.sprint && !isDash)
             {
-                _animator.SetFloat(_animIDSpeed, _animationBlend);
-                _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+                isDash = true;
+                StartCoroutine(Dashing(targetDirection));
             }
         }
 
+        private IEnumerator Dashing(Vector3 direction)
+        {
+            
+            float startTime = Time.time;
+            while (Time.time <= startTime + DashTime)
+            {
+                // Debug.Log("Time :" + startTime + ", startTime + DashTime: " + (startTime + DashTime) );
+                _controller.Move(direction.normalized * (DashSpeed * Time.deltaTime));
+                yield return null;
+            }
+
+            isDash = false;
+
+        }
+        
         private void JumpAndGravity()
         {
             if (Grounded)

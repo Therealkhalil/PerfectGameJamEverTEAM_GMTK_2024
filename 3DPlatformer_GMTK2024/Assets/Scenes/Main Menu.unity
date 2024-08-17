@@ -151,12 +151,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8412650477a960b40a6fd06d4c9edc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 0}
-  loadingBarFill: {fileID: 0}
+  loadingScreen: {fileID: 985846221}
+  loadingBarFill: {fileID: 2065112962}
   timeSlowStrength: 0.05
   timeSlowDuration: 1
-  m_SceneName: 
-  SceneAsset: {fileID: 0}
+  m_SceneName: Prototype Area
+  SceneAsset: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
 --- !u!4 &19672236
 Transform:
   m_ObjectHideFlags: 0

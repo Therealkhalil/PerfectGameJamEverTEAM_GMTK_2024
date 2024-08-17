@@ -126,6 +126,29 @@ MonoBehaviour:
       Pack/Packages/Assets
   _prefabs: []
   _uiSelected: 0
+--- !u!114 &-7518563633981894876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b09c502d52d26944bd03a0b831a19c4, type: 3}
+  m_Name: Models
+  m_EditorClassIdentifier: 
+  _guid:
+    _guidString: ef79e1e4-0ebd-4112-978a-0543bdf41c94
+  _parentLib: {fileID: 0}
+  _directChildren: []
+  _prefabsVisibleInManager: 1
+  _libName: Models
+  _folderPath:
+    _path: Assets/Models
+    _reveresedPath: Models/Assets
+  _prefabs: []
+  _uiSelected: 1
 --- !u!114 &-7286114291878741612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,6 +753,7 @@ MonoBehaviour:
   - {fileID: -8103634855289858338}
   - {fileID: -309443012778063419}
   - {fileID: 1468946516039360125}
+  - {fileID: -7518563633981894876}
 --- !u!114 &253497287055825962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,7 +918,7 @@ MonoBehaviour:
   - {fileID: 4923270299809071599}
   - {fileID: -3842389797474359226}
   - {fileID: 2900892403388329211}
-  _uiSelected: 1
+  _uiSelected: 0
 --- !u!114 &1699401729561386141
 MonoBehaviour:
   m_ObjectHideFlags: 0

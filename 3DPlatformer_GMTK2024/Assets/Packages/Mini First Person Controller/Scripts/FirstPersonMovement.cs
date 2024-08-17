@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class FirstPersonMovement : MonoBehaviour
 {
+    /// <summary>
+    /// TODO: Dash no velocity 
+    /// Coyote Time
+    /// smoothstep movement: t = t * t * (3f - 2f * t); where t is the value of our vector per frame
+    /// Update Unity Input System
+    /// </summary>
     public float speed = 5;
 
     [Header("Running")]

@@ -15,4 +15,4 @@ MonoBehaviour:
   _extrudeSpace: 0
   _projectionMode: 0
   _padding: {x: 0.01, y: 0.01, z: 0.01}
-  _avoidOverlaps: 1
+  _avoidOverlaps: 0

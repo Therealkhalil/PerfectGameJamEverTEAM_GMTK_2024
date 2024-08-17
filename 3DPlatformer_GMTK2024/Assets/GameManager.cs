@@ -22,8 +22,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private string m_SceneName;
 
-    bool skippedCutscene = false;
-
     //Honestly forgot why I wanted to validate the main scene...
     //keep this in unless it causes issues for your editor, it won't be in the game build anyway.
 #if UNITY_EDITOR
@@ -53,11 +51,6 @@ public class GameManager : MonoBehaviour
     private void OnChangedActiveScene(Scene arg0, Scene arg1)
     {
         throw new NotImplementedException();
-    }
-
-    public void SetaBool()
-    {
-        skippedCutscene = true;
     }
 
 
@@ -108,7 +101,6 @@ public class GameManager : MonoBehaviour
     }
     public void SceneChange(string sceneName)
     {
-        Debug.Log("Called");
         StartCoroutine(SceneChangeAsync(sceneName));
     }
 
@@ -122,6 +114,15 @@ public class GameManager : MonoBehaviour
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneID);
 
         //GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().SaveGame();
+
+        if(loadingScreen == null)
+        {
+            while (!operation.isDone)
+            {
+                yield return null;
+            }
+            yield break;
+        }
 
         loadingScreen.SetActive(true);
 
@@ -140,9 +141,16 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("new scene");
 
-        //GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().SaveGame();
-
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+
+        if (loadingScreen == null)
+        {
+            while (!operation.isDone)
+            {
+                yield return null;
+            }
+            yield break;
+        }
 
         loadingScreen.SetActive(true);
 

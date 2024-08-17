@@ -25,4 +25,5 @@ public class RotationBehaviour : MonoBehaviour
 
         transform.Rotate(rotationVector, rotationSpeed * Time.deltaTime);
     }
+
 }

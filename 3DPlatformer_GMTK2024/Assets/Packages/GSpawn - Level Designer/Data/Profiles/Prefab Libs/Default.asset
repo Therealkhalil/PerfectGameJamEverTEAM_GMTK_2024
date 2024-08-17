@@ -554,7 +554,7 @@ MonoBehaviour:
   _modularSnapVerticalStep: 0
   _surfaceSnapAppliedOffsetFromSurface: 0
   _modelSize: {x: 0.38829002, y: 2.0364764, z: 2.068}
-  _uiSelected: 0
+  _uiSelected: 1
 --- !u!114 &-1400502748908929541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,8 +647,8 @@ MonoBehaviour:
     _serializedKeys: []
     _serializedValues: []
   _spawnGuideTransformTRS:
-    _position: {x: -0, y: 0, z: 0}
-    _rotation: {x: 0, y: -0, z: -0, w: 1}
+    _position: {x: 54.29294, y: 0, z: -1.9151926}
+    _rotation: {x: -0, y: -0, z: -0, w: -1}
     _scale: {x: 1, y: 1, z: 1}
   _modularSnapVerticalStep: 0
   _surfaceSnapAppliedOffsetFromSurface: 0
@@ -795,7 +795,7 @@ MonoBehaviour:
   _modularSnapVerticalStep: 0
   _surfaceSnapAppliedOffsetFromSurface: 0
   _modelSize: {x: 1.2518976, y: 4.2170243, z: 7.5720024}
-  _uiSelected: 1
+  _uiSelected: 0
 --- !u!114 &1313634843177005993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,6 +893,7 @@ MonoBehaviour:
   - {fileID: 8496716826428459789}
   - {fileID: 4923270299809071599}
   - {fileID: -3842389797474359226}
+  - {fileID: 2900892403388329211}
   _uiSelected: 1
 --- !u!114 &1699401729561386141
 MonoBehaviour:
@@ -978,6 +979,39 @@ MonoBehaviour:
     type: 3}
   _preview:
     _prefabAsset: {fileID: 4927774854340721166, guid: 14f5723f491c5a64d914851138ec166c,
+      type: 3}
+    _texture: {fileID: 0}
+    _yaw: 0
+    _pitch: 0
+  _sceneToObjectGroup:
+    _serializedKeys: []
+    _serializedValues: []
+  _spawnGuideTransformTRS:
+    _position: {x: -0, y: 0, z: 0}
+    _rotation: {x: 0, y: -0, z: -0, w: 1}
+    _scale: {x: 1, y: 1, z: 1}
+  _modularSnapVerticalStep: 0
+  _surfaceSnapAppliedOffsetFromSurface: 0
+  _modelSize: {x: 5.3999996, y: 2.511542, z: 5.3999996}
+  _uiSelected: 0
+--- !u!114 &2900892403388329211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfdaf7f2c4c1d04580d676ed3717f21, type: 3}
+  m_Name: Ground_A
+  m_EditorClassIdentifier: 
+  _guid:
+    _guidString: 83f08e20-ef1f-4f02-ba17-47fe6409302a
+  _prefabAsset: {fileID: 8814771233844399499, guid: 951feb579e3b39140b4fe8b330bf1c32,
+    type: 3}
+  _preview:
+    _prefabAsset: {fileID: 8814771233844399499, guid: 951feb579e3b39140b4fe8b330bf1c32,
       type: 3}
     _texture: {fileID: 0}
     _yaw: 0

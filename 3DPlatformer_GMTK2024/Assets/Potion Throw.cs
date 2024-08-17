@@ -16,7 +16,6 @@ public class PotionThrow : MonoBehaviour
     Vector3 StartPoint, EndPoint;
     public float DetectionHeight;
 
-    private SphereCollider _sphereCollider;
     private Rigidbody _rigidbody;
 
     private void Update()
@@ -26,7 +25,6 @@ public class PotionThrow : MonoBehaviour
 
     private void Awake()
     {
-        _sphereCollider = GetComponent<SphereCollider>();
         _rigidbody = GetComponent<Rigidbody>();
         
         DetectionHeight = 2;
@@ -47,7 +45,7 @@ public class PotionThrow : MonoBehaviour
     {
         CurrentTime += Time.deltaTime;
         //
-        if (Physics.Raycast(_sphereCollider.bounds.center, Vector3.down, DetectionHeight, WhatIsGround) == true)
+        if (Physics.Raycast(GetComponent<SphereCollider>().bounds.center, Vector3.down, DetectionHeight, WhatIsGround) == true)
         {
             _rigidbody.isKinematic = false;
             if (BandAidDone == false)
@@ -104,6 +102,6 @@ public class PotionThrow : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;
-        Gizmos.DrawLine(_sphereCollider.bounds.center, _sphereCollider.bounds.center - new Vector3(0.0f, DetectionHeight, 0.0f));
+        Gizmos.DrawLine(GetComponent<SphereCollider>().bounds.center, GetComponent<SphereCollider>().bounds.center - new Vector3(0.0f, DetectionHeight, 0.0f));
     }
 }

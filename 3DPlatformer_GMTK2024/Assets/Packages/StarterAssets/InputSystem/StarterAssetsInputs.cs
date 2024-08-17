@@ -12,6 +12,8 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool throwBigger;
+		public bool throwSmaller;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -43,6 +45,16 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
+		public void OnThrowBigger(InputValue value)
+		{
+			ThrowBiggerInput(value.isPressed);
+		}
+		
+		public void OnThrowSmaller(InputValue value)
+		{
+			ThrowSmallerInput(value.isPressed);
+		}
 #endif
 
 
@@ -65,6 +77,17 @@ namespace StarterAssets
 		{
 			sprint = newSprintState;
 		}
+		
+		public void ThrowBiggerInput(bool newSprintState)
+		{
+			throwBigger = newSprintState;
+		}
+		
+		public void ThrowSmallerInput(bool newSprintState)
+		{
+			throwSmaller = newSprintState;
+		}
+		
 
 		private void OnApplicationFocus(bool hasFocus)
 		{

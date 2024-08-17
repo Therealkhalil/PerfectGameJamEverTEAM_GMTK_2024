@@ -15,6 +15,9 @@ namespace StarterAssets
 #endif
     public class PlayerController : MonoBehaviour
     {
+        [Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
+        public bool Grounded = true;
+        
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -48,8 +51,7 @@ namespace StarterAssets
         public float FallTimeout = 0.15f;
 
         [Header("Player Grounded")]
-        [Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
-        public bool Grounded = true;
+
 
         [Tooltip("Useful for rough ground")]
         public float GroundedOffset = -0.14f;
@@ -80,9 +82,12 @@ namespace StarterAssets
         /// New Detail of movement
         /// </summary>
         [Header("New Movement")]
-        public float DashTime = 1.0f;
-        public float DashSpeed = 3.0f;
+        public float DashTime = 0.2f;
+        public float DashSpeed = 18.0f;
         private bool isDash = false;
+
+        public float coyoteTime = 0.2f;
+        private float coyoteCounter;
 
         // cinemachine
         private float _cinemachineTargetYaw;
@@ -166,7 +171,7 @@ namespace StarterAssets
             if (isDash) {return;}
             
             _hasAnimator = TryGetComponent(out _animator);
-
+            
             JumpAndGravity();
             GroundedCheck();
             Move();
@@ -236,6 +241,8 @@ namespace StarterAssets
             {
                 targetSpeed = 0.0f;
             }
+            
+            
 
             // a reference to the players current horizontal velocity
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
@@ -289,6 +296,7 @@ namespace StarterAssets
             if (_input.sprint && !isDash)
             {
                 isDash = true;
+                coyoteCounter = 0;
                 StartCoroutine(Dashing(targetDirection));
             }
         }
@@ -305,12 +313,22 @@ namespace StarterAssets
             }
 
             isDash = false;
-
+            _input.sprint = false;
         }
         
         private void JumpAndGravity()
         {
             if (Grounded)
+            {
+                coyoteCounter = coyoteTime;
+            }
+            else
+            {
+                coyoteCounter -= Time.deltaTime;
+            }
+            
+            
+            if (coyoteCounter > 0f) // = Grounded
             {
                 // reset the fall timeout timer
                 _fallTimeoutDelta = FallTimeout;
@@ -331,6 +349,8 @@ namespace StarterAssets
                 // Jump
                 if (_input.jump && _jumpTimeoutDelta <= 0.0f)
                 {
+                    coyoteCounter = 0f;
+                    
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 

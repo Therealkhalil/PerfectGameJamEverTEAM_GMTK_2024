@@ -82,12 +82,17 @@ namespace StarterAssets
         /// New Detail of movement
         /// </summary>
         [Header("New Movement")]
+        // Dash
         public float DashTime = 0.2f;
         public float DashSpeed = 18.0f;
         private bool isDash = false;
-
+        // Coyote Time
         public float coyoteTime = 0.2f;
         private float coyoteCounter;
+        // Smooth Walk
+        public float accelerateTime = 1.0f;
+        private float _curAccelerateTime = 0f;
+        
 
         // cinemachine
         private float _cinemachineTargetYaw;
@@ -326,7 +331,6 @@ namespace StarterAssets
             {
                 coyoteCounter -= Time.deltaTime;
             }
-            
             
             if (coyoteCounter > 0f) // = Grounded
             {

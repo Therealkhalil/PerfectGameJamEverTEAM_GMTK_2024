@@ -112,23 +112,4 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/PlayerController.cs</url>
-          <line>330</line>
-          <properties documentPath="C:\Users\User\Desktop\Yuna\GitHub\PerfectGameJamEverTEAM_GMTK_2024\3DPlatformer_GMTK2024\Assets\Scripts\Game\PlayerController.cs" containingFunctionPresentation="Method 'JumpAndGravity'">
-            <startOffsets>
-              <option value="11911" />
-            </startOffsets>
-            <endOffsets>
-              <option value="11934" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
 </project>

@@ -7,6 +7,7 @@ TagManager:
   - CinemachineTarget
   - Obstacle
   - Coin
+  - Hammer
   layers:
   - Default
   - TransparentFX

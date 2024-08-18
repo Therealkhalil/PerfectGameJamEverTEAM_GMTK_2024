@@ -51,9 +51,15 @@ public class ShatterObject : MonoBehaviour
         Destroy(gameObject);
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Hammer")
+            ShatterObj(other.transform);
+    }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("hit");
+        if (collision.transform.tag == "Hammer")
+            ShatterObj(collision.transform);
     }
     private void Awake()
     {

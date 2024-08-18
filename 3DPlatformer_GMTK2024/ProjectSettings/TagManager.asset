@@ -6,11 +6,12 @@ TagManager:
   tags:
   - CinemachineTarget
   - Obstacle
+  - Coin
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - IgnoreRender
   - Water
   - UI
   - 

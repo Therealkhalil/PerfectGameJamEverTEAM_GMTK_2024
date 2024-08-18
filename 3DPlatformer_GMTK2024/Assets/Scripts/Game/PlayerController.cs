@@ -20,10 +20,10 @@ namespace StarterAssets
         
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
-        public float MoveSpeed = 2.0f;
+        public float MoveSpeed = 4.0f;
 
-        [Tooltip("Sprint speed of the character in m/s")]
-        public float AccerlateSpeed = 4.0f;
+        // [Tooltip("Sprint speed of the character in m/s")]
+        // public float AccerlateSpeed = 4.0f;
 
         [Tooltip("How fast the character turns to face movement direction")]
         [Range(0.0f, 0.3f)]
@@ -89,10 +89,6 @@ namespace StarterAssets
         // Coyote Time
         public float coyoteTime = 0.2f;
         private float coyoteCounter;
-        // Smooth Walk
-        public float accelerateTime = 1.0f;
-        private float _curAccelerateTime = 0f;
-        
 
         // cinemachine
         private float _cinemachineTargetYaw;
@@ -238,7 +234,7 @@ namespace StarterAssets
             // float targetSpeed = _input.sprint ? AccerlateSpeed : MoveSpeed;
             
             // Use this for natural movement - @POTO
-            float targetSpeed = AccerlateSpeed;
+            float targetSpeed = MoveSpeed;
             
             // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
             // if there is no input, set the target speed to 0

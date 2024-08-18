@@ -40,12 +40,12 @@ MonoBehaviour:
     _serializedList:
     - _guidString: 90397a55-cb7b-4b65-9017-0ca1468563e4
   selectRangeBeginId:
-    _guidString: 90397a55-cb7b-4b65-9017-0ca1468563e4
+    _guidString: 377b0bad-65fb-466c-bd49-66f3e20edd08
   selectRangeEndId:
-    _guidString: 90397a55-cb7b-4b65-9017-0ca1468563e4
+    _guidString: 377b0bad-65fb-466c-bd49-66f3e20edd08
   hasSelectRange: 1
-  scrollOffset: {x: 0, y: 378}
-  vertScrollHighValue: 1209
+  scrollOffset: {x: 0, y: 0}
+  vertScrollHighValue: NaN
   vertScrollLowValue: 0
 --- !u!114 &11400000
 MonoBehaviour:

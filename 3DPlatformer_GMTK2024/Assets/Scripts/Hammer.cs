@@ -16,8 +16,11 @@ public class Hammer : MonoBehaviour
     {
         
     }
-
-    public IEnumerator SwingHammer()
+    public void SwingHammer()
+    {
+        StartCoroutine(SwingHammerRoutine());
+    }
+    private IEnumerator SwingHammerRoutine()
     {
         float Iterator = 0;
         while (Iterator < 1f)

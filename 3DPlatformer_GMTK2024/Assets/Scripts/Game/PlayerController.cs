@@ -52,7 +52,6 @@ namespace StarterAssets
 
         [Header("Player Grounded")]
 
-
         [Tooltip("Useful for rough ground")]
         public float GroundedOffset = -0.14f;
 
@@ -85,7 +84,10 @@ namespace StarterAssets
         // Dash
         public float DashTime = 0.2f;
         public float DashSpeed = 18.0f;
+        public float DashCoolDown = 1.0f;
         private bool isDash = false;
+        private bool _readyToDash = true;
+        
         // Coyote Time
         public float coyoteTime = 0.2f;
         private float coyoteCounter;
@@ -242,8 +244,6 @@ namespace StarterAssets
             {
                 targetSpeed = 0.0f;
             }
-            
-            
 
             // a reference to the players current horizontal velocity
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
@@ -294,9 +294,10 @@ namespace StarterAssets
                              new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
             
             // Dash
-            if (_input.sprint && !isDash)
+            if (_input.sprint && !isDash && _readyToDash)
             {
                 isDash = true;
+                _readyToDash = false;
                 coyoteCounter = 0;
                 StartCoroutine(Dashing(targetDirection));
             }
@@ -304,7 +305,6 @@ namespace StarterAssets
 
         private IEnumerator Dashing(Vector3 direction)
         {
-            
             float startTime = Time.time;
             while (Time.time <= startTime + DashTime)
             {
@@ -312,9 +312,10 @@ namespace StarterAssets
                 _controller.Move(direction.normalized * (DashSpeed * Time.deltaTime));
                 yield return null;
             }
-
-            isDash = false;
             _input.sprint = false;
+            isDash = false;
+            yield return new WaitForSeconds(DashCoolDown);
+            _readyToDash = true;
         }
         
         private void JumpAndGravity()

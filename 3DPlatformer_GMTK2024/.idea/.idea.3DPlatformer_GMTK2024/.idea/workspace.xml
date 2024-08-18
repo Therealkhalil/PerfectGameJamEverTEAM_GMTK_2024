@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d0293eb-623c-401b-888c-3418631402fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.3DPlatformer_GMTK2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3DPlatformer_GMTK2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo control.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo control.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,7 @@
       <updated>1723867246790</updated>
       <workItem from="1723867246792" duration="14373000" />
       <workItem from="1723913745992" duration="68000" />
-      <workItem from="1723947171489" duration="634000" />
+      <workItem from="1723947171489" duration="2265000" />
     </task>
     <servers />
   </component>

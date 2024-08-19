@@ -8,7 +8,7 @@ public class Hammer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(SwingHammerRoutine());
+      
     }
 
     // Update is called once per frame
@@ -26,9 +26,18 @@ public class Hammer : MonoBehaviour
             collision.gameObject.TryGetComponent<PotionObject>(out potionObject);
 
         if (potionObject != null && potionObject._type == PotionType.BIGGER)
-            transform.localScale = Vector3.one * 2f;
+            StartCoroutine(Grow());
     }
-  
+    private IEnumerator Grow()
+    {
+        float Iterator = 0;
+        while(Iterator<0.5f)
+        {
+            yield return new WaitForEndOfFrame();
+            Iterator += Time.deltaTime;
+            transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one * 2, Iterator / 0.5f);
+        }
+    }
     private IEnumerator SwingHammerRoutine()
     {
         float Iterator = 0;

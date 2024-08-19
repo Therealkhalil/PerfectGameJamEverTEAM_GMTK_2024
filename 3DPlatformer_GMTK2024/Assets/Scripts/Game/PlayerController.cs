@@ -102,6 +102,7 @@ namespace StarterAssets
         private float _targetRotation = 0.0f;
         private float _rotationVelocity;
         [HideInInspector] public float _verticalVelocity;
+        [HideInInspector] public bool _OnPlatform = false;
         private float _terminalVelocity = 53.0f;
 
         // timeout deltatime
@@ -172,12 +173,14 @@ namespace StarterAssets
         private void Update()
         {
             if (isDash) {return;}
-            
+            if (!_OnPlatform)
+                Move();
+
             _hasAnimator = TryGetComponent(out _animator);
             
             JumpAndGravity();
             GroundedCheck();
-            Move();
+           
         }
 
         private void LateUpdate()
@@ -217,8 +220,8 @@ namespace StarterAssets
                 //Don't multiply mouse input by Time.deltaTime;
                 float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-                _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
-                _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;
+                _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier*1.75f;
+                _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier*1.75f;
             }
 
             // clamp our rotations so our values are limited 360 degrees
@@ -350,6 +353,9 @@ namespace StarterAssets
                 // Jump
                 if (_input.jump && _jumpTimeoutDelta <= 0.0f)
                 {
+                    Debug.Log("jump");
+                    _OnPlatform = false;
+                    transform.parent.SetParent(null); 
                     coyoteCounter = 0f;
                     
                     // the square root of H * -2 * G = how much velocity needed to reach desired height

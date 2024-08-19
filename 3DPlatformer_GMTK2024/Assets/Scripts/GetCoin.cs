@@ -23,7 +23,6 @@ public class GetCoin : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("triggered");
         if (collision.transform.CompareTag("Coin"))
         {
             coinCounter++;

@@ -22,6 +22,8 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
+		[Header("UI Control Settings")] public bool escAction;
+
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
 		{
@@ -55,9 +57,13 @@ namespace StarterAssets
 		{
 			ThrowSmallerInput(value.isPressed);
 		}
+
+		public void OnEscAction(InputValue value)
+		{
+			EscActionInput(value.isPressed);
+		}
 #endif
-
-
+		
 		public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
@@ -88,6 +94,10 @@ namespace StarterAssets
 			throwSmaller = newSprintState;
 		}
 		
+		public void EscActionInput(bool newSprintState)
+		{
+			escAction = newSprintState;
+		}
 
 		private void OnApplicationFocus(bool hasFocus)
 		{

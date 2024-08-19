@@ -7,24 +7,31 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class MenuManager : MonoBehaviour
 {
     [Header("Input System")]
-#if ENABLE_INPUT_SYSTEM 
-    [SerializeField] private PlayerInput _playerInput;
-#endif
-    [SerializeField] private StarterAssetsInputs _input;
+    [SerializeField]
+    private GameObject player;
+    private PlayerController _playerInput;
+    private StarterAssetsInputs _input;
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI coinText;
     [SerializeField] private TextMeshProUGUI timeText;
-    [SerializeField] private GameObject PopupObj;
-    [SerializeField] private DOTweenAnimation _animation;
+    [SerializeField] private GameObject pauseObj;
+    [SerializeField] private GameObject optionObj;
 
     [Header("Setting")]
     private const float MAX_GAMETIME = 300.0f;
     [SerializeField] private float gameTime = MAX_GAMETIME;
+
+    private void Awake()
+    {
+        _playerInput = player.GetComponent<PlayerController>();
+        _input = player.GetComponent<StarterAssetsInputs>();
+    }
 
     private void Start()
     {
@@ -35,37 +42,56 @@ public class MenuManager : MonoBehaviour
     {
         if (_input.escAction)
         {
-            Debug.Log("ESC Pressed");
-            PopupObj.SetActive(true);
             _input.escAction = false;
+            Debug.Log("ESC Pressed");
+
+            if (!pauseObj.activeSelf)
+            {
+                pauseObj.SetActive(true);
+                
             
-            ChangePlayerInputSetting(false);
+                ChangePlayerInputSetting(false);
             
-            GameManager.instance.StopTime();
+                GameManager.instance.StopTime();
+            }
+            else
+            {
+                Event_Resume();
+            }
+            
         }
 
         if (_input.tabAction)
         {
             Debug.Log("TAB Pressed");
             _input.tabAction = false;
-            _animation.gameObject.SetActive(true);
 
-            ChangePlayerInputSetting(false);
+            if (!optionObj.activeSelf)
+            {
+                optionObj.SetActive(true);
+
+                ChangePlayerInputSetting(false);
             
-            GameManager.instance.StopTime();
+                GameManager.instance.StopTime();
+            }
+            else
+            {
+                Event_CloseOption();
+            }
+            
         }
     }
 
     public void ChangePlayerInputSetting(bool value)
     {
         _input.ChangeCursorInput(value);
-        _playerInput.enabled = value;
+        _playerInput.enabled = value; 
     }
     
     public void Event_CloseOption()
     {
         Debug.Log("Close Option");
-        _animation.gameObject.SetActive(false);
+        optionObj.SetActive(false);
         GameManager.instance.ResumeTime();
         ChangePlayerInputSetting(true);
     }
@@ -85,7 +111,7 @@ public class MenuManager : MonoBehaviour
         GameManager.instance.ResumeTime();
         ChangePlayerInputSetting(true);
         
-        PopupObj.SetActive(false);
+        pauseObj.SetActive(false);
         
     }
     

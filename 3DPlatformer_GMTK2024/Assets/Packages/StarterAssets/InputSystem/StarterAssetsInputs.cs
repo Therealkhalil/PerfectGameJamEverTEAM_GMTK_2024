@@ -63,6 +63,16 @@ namespace StarterAssets
 			EscActionInput(value.isPressed);
 		}
 #endif
+
+		/// <summary>
+		/// For menuManager to click UI
+		/// </summary>
+		/// <param name="val"> cursor on/off </param>
+		public void ChangeCursorInput(bool val)
+		{
+			SetCursorState(val);
+			cursorInputForLook = val;
+		}
 		
 		public void MoveInput(Vector2 newMoveDirection)
 		{
@@ -108,6 +118,7 @@ namespace StarterAssets
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
+		
 	}
 	
 }

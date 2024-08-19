@@ -13,8 +13,8 @@ using UnityEngine;
 public class ObjectScaling : MonoBehaviour
 {
     // Variables for scaling the object
-    [SerializeField] private float scaleSpeed = 0.1f;
-    [Range(1, 5)][SerializeField] private float scaleValue = 0.5f;
+    [SerializeField] private float scaleSpeed = 0.5f;
+    [Range(-5, 5)] public float scaleValue = 0f;
 
     // Check if the object can scale in the X, Y, and Z directions
     [SerializeField] private bool canScaleX;

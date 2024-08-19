@@ -5,25 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d0293eb-623c-401b-888c-3418631402fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.3DPlatformer_GMTK2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3DPlatformer_GMTK2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Prefab Libs/Default.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Prefab Libs/Default.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/StarterAssets/InputSystem/StarterAssets.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/StarterAssets/InputSystem/StarterAssets.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/StarterAssets/InputSystem/StarterAssetsInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/StarterAssets/InputSystem/StarterAssetsInputs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo control.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo control.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype Area.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype Area.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GetCoin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GetCoin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/HUD/Coin Icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/HUD/Coin Icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/HUD/Gem Icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/HUD/Gem Icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/HUD/HUD Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/HUD/HUD Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/HUD/Menu Button - In Game.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/HUD/Menu Button - In Game.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/HUD/Quit to Main Menu Pop Up.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/HUD/Quit to Main Menu Pop Up.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/HUD/Settings Button - In Game.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/HUD/Settings Button - In Game.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/HUD/Timer.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/HUD/Timer.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Button - Default State.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Button - Default State.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Button - Selected State.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Button - Selected State.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/A Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/A Key.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/D Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/D Key.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Down Arrow Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Down Arrow Key.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Full Screen Setting Button - Default State.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Full Screen Setting Button - Default State.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Left Click Mouse.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Left Click Mouse.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Left Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Left Key.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Right Click Mouse.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Right Click Mouse.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Right Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Right Key.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/S Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/S Key.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Settings Menu Divider.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Settings Menu Divider.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Settings Menu.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Settings Menu.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Shift Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Shift Key.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Space Bar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Space Bar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Up Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Up Key.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Volume Slider Selector.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Volume Slider Selector.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Volume Slider.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Volume Slider.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/W Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/W Key.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/super-comic-font/SuperComic-qZg62 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/super-comic-font/SuperComic-qZg62 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,25 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev/yun&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/sesac/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/sesac/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
-      &quot;/Users/sesac/Library/Application Support/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/sesac/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
+      "/Users/sesac/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
+      "/Users/sesac/Library/Application Support/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/MacOS/Unity" />

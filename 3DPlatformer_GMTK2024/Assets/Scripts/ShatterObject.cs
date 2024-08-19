@@ -44,12 +44,22 @@ public class ShatterObject : MonoBehaviour
 
             rb.AddForce(force);
             index++;
+
+           
         }
-       
 
-   
-        Destroy(gameObject);
 
+
+        foreach (MeshRenderer renderer in transform.GetComponentsInChildren<MeshRenderer>())
+            renderer.enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+
+        StartCoroutine(KillChildren(newObject));
+    }
+    private IEnumerator KillChildren(GameObject obj)
+    {
+        yield return new WaitForSeconds(3f);
+        Destroy(obj);
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 9103166031350798223}
   - component: {fileID: 492861669429028252}
   - component: {fileID: 6944595361125166897}
+  - component: {fileID: 1189016942964370193}
   m_Layer: 0
   m_Name: Props_1a
   m_TagString: Untagged
@@ -233,3 +234,15 @@ MonoBehaviour:
   rotateY: 1
   rotateZ: 0
   rotationSpeed: 360
+--- !u!114 &1189016942964370193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6391233746760414441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ab51995c0916e49adcbcb30f866294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

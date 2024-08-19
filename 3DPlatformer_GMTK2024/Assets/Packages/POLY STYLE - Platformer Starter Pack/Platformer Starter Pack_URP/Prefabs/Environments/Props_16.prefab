@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7465202293923042913}
   - component: {fileID: 7148370227824314041}
   - component: {fileID: 6619236581507473961}
+  - component: {fileID: 715246078298781444}
+  - component: {fileID: 8650414780079522196}
   m_Layer: 0
   m_Name: Props_16
   m_TagString: Untagged
@@ -106,4 +108,37 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.8622612
+  m_Center: {x: 0.00056910515, y: 0.010512352, z: 0.0010170937}
+--- !u!114 &715246078298781444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7704129765306034611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ab51995c0916e49adcbcb30f866294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &8650414780079522196
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7704129765306034611}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.92
   m_Center: {x: 0.00056910515, y: 0.010512352, z: 0.0010170937}

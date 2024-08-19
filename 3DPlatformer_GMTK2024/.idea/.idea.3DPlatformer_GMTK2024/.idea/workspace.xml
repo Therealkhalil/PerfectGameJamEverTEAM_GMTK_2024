@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d0293eb-623c-401b-888c-3418631402fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/A Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/A Key.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/D Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/D Key.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Down Arrow Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Down Arrow Key.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Full Screen Setting Button - Default State.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Full Screen Setting Button - Default State.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Left Click Mouse.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Left Click Mouse.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Left Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Left Key.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Right Click Mouse.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Right Click Mouse.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Right Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Right Key.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/S Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/S Key.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Settings Menu Divider.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Settings Menu Divider.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Settings Menu.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Settings Menu.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Shift Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Shift Key.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Space Bar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Space Bar.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Up Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Up Key.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Volume Slider Selector.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Volume Slider Selector.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Volume Slider.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/Volume Slider.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/W Key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Assets/Settings Screen/W Key.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/super-comic-font/SuperComic-qZg62 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/super-comic-font/SuperComic-qZg62 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.3DPlatformer_GMTK2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3DPlatformer_GMTK2024/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

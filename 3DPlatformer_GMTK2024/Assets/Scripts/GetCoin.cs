@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,10 +9,17 @@ public class GetCoin : MonoBehaviour
 {
     int coinCounter = 0;
 
-    //TODO: Hookup with UI
+    // Hookup with UI
+    [SerializeField] private MenuManager menuManager;
+    
     public delegate void OnCoinCollected();
     public event OnCoinCollected onCoinCollected;
     public AudioClip collectCoinSound;
+
+    private void Start()
+    {
+        menuManager.SetCoinText(coinCounter);
+    }
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -18,7 +27,8 @@ public class GetCoin : MonoBehaviour
         if (collision.transform.CompareTag("Coin"))
         {
             coinCounter++;
-            Debug.Log("Coins: " + coinCounter);
+            // Debug.Log("Coins: " + coinCounter);
+            menuManager.SetCoinText(coinCounter);
 
             AudioSource.PlayClipAtPoint(collectCoinSound, collision.transform.position, 1);
 

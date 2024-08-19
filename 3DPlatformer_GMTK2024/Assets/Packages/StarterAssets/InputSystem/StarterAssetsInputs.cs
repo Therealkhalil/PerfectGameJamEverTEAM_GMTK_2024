@@ -22,7 +22,9 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
-		[Header("UI Control Settings")] public bool escAction;
+		[Header("UI Control Settings")]
+		public bool escAction;
+		public bool tabAction;
 
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
@@ -61,6 +63,11 @@ namespace StarterAssets
 		public void OnEscAction(InputValue value)
 		{
 			EscActionInput(value.isPressed);
+		}
+		
+		public void OnTabAction(InputValue value)
+		{
+			TabActionInput(value.isPressed);
 		}
 #endif
 
@@ -107,6 +114,11 @@ namespace StarterAssets
 		public void EscActionInput(bool newSprintState)
 		{
 			escAction = newSprintState;
+		}
+		
+		public void TabActionInput(bool newSprintState)
+		{
+			tabAction = newSprintState;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)

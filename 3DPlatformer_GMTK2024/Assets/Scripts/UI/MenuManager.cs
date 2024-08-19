@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using StarterAssets;
 using TMPro;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI coinText;
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private GameObject PopupObj;
+    [SerializeField] private DOTweenAnimation _animation;
 
     [Header("Setting")]
     private const float MAX_GAMETIME = 300.0f;
@@ -31,18 +33,41 @@ public class MenuManager : MonoBehaviour
     
     private void Update()
     {
-        // TODO : Show setting popup
         if (_input.escAction)
         {
             Debug.Log("ESC Pressed");
-            _input.ChangeCursorInput(false);
-            _playerInput.enabled = false;
-            
             PopupObj.SetActive(true);
             _input.escAction = false;
             
+            ChangePlayerInputSetting(false);
+            
             GameManager.instance.StopTime();
         }
+
+        if (_input.tabAction)
+        {
+            Debug.Log("TAB Pressed");
+            _input.tabAction = false;
+            _animation.gameObject.SetActive(true);
+
+            ChangePlayerInputSetting(false);
+            
+            GameManager.instance.StopTime();
+        }
+    }
+
+    public void ChangePlayerInputSetting(bool value)
+    {
+        _input.ChangeCursorInput(value);
+        _playerInput.enabled = value;
+    }
+    
+    public void Event_CloseOption()
+    {
+        Debug.Log("Close Option");
+        _animation.gameObject.SetActive(false);
+        GameManager.instance.ResumeTime();
+        ChangePlayerInputSetting(true);
     }
 
     /// <summary>
@@ -58,8 +83,7 @@ public class MenuManager : MonoBehaviour
     public void Event_Resume()
     {
         GameManager.instance.ResumeTime();
-        _input.ChangeCursorInput(true);
-        _playerInput.enabled = true;
+        ChangePlayerInputSetting(true);
         
         PopupObj.SetActive(false);
         

@@ -6,9 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="9d0293eb-623c-401b-888c-3418631402fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3DPlatformer_GMTK2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3DPlatformer_GMTK2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Curve Prefabs/CurvePrefabProfileDb.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Curve Prefabs/CurvePrefabProfileDb.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Grid/GridSettingsProfileDb.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Grid/GridSettingsProfileDb.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Grid/GridSettingsProfileDb.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Grid/GridSettingsProfileDb.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Int Range Prefabs/IntRangePrefabProfileDb.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Int Range Prefabs/IntRangePrefabProfileDb.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Prefab Libs/PrefabLibProfileDb.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Prefab Libs/PrefabLibProfileDb.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Random Prefabs/RandomPrefabProfileDb.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Random Prefabs/RandomPrefabProfileDb.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Scatter Brush Prefabs/ScatterBrushPrefabProfileDb.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Scatter Brush Prefabs/ScatterBrushPrefabProfileDb.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Segments Object Spawn/SegmentsObjectSpawnSettingsProfileDb.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Segments Object Spawn/SegmentsObjectSpawnSettingsProfileDb.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Segments Object Spawn/SegmentsObjectSpawnSettingsProfileDb.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Segments Object Spawn/SegmentsObjectSpawnSettingsProfileDb.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Shortcuts/ShortcutProfileDb.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Shortcuts/ShortcutProfileDb.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Shortcuts/ShortcutProfileDb.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Profiles/Shortcuts/ShortcutProfileDb.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Settings/ObjectSelection_ObjectModularSnapSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Settings/ObjectSelection_ObjectModularSnapSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Settings/ObjectSelection_ObjectModularSnapSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Settings/ObjectSelection_ObjectModularSnapSettings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Settings/ObjectSelection_ObjectSurfaceSnapSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Settings/ObjectSelection_ObjectSurfaceSnapSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Settings/ObjectSelection_ObjectSurfaceSnapSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/GSpawn - Level Designer/Data/Settings/ObjectSelection_ObjectSurfaceSnapSettings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/StarterAssets/InputSystem/StarterAssets.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/StarterAssets/InputSystem/StarterAssets.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/StarterAssets/InputSystem/StarterAssetsInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/StarterAssets/InputSystem/StarterAssetsInputs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype Area.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype Area.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype Area.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype Area.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/super-comic-font/SuperComic-qZg62 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/super-comic-font/SuperComic-qZg62 SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,26 +50,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/sesac/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
-      "/Users/sesac/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
-      "/Users/sesac/Library/Application Support/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/sesac/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/sesac/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/Users/sesac/Library/Application Support/Symbols/src&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
+}</component>
+  <component name="RunManager" selected="Attach to Unity Editor.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />

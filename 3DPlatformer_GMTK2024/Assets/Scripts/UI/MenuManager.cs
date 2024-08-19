@@ -43,7 +43,7 @@ public class MenuManager : MonoBehaviour
         if (_input.escAction)
         {
             _input.escAction = false;
-            Debug.Log("ESC Pressed");
+            // Debug.Log("ESC Pressed");
 
             if (!pauseObj.activeSelf)
             {
@@ -63,7 +63,7 @@ public class MenuManager : MonoBehaviour
 
         if (_input.tabAction)
         {
-            Debug.Log("TAB Pressed");
+            // Debug.Log("TAB Pressed");
             _input.tabAction = false;
 
             if (!optionObj.activeSelf)

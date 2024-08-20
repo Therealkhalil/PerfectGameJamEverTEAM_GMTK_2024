@@ -2657,6 +2657,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 2014830238}
+    - target: {fileID: 4611948956870075300, guid: 2cfd87436f82f694cb1ed07e801a4415,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5411270384614237885, guid: 2cfd87436f82f694cb1ed07e801a4415,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18066,9 +18071,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d188a11eed3dd44bafc0afdd5ad557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   scaleSpeed: 0.2
   scaleValue: 1
   isScaling: 0
+=======
+  scaleSpeed: 0.1
+  scaleValue: 2
+>>>>>>> Stashed changes
   canScaleX: 1
   canScaleY: 1
   canScaleZ: 1

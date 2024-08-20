@@ -8,16 +8,26 @@ public class FollowPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(Platform == null)
+        {
+            Debug.LogError("Platform is not assigned");
+            return;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Platform.transform.position;
+        if (Platform != null)
+        {
+            transform.position = Platform.transform.position;
+        }
     }
     private void OnValidate()
     {
-        transform.position = Platform.transform.position;
+        if (Platform != null)
+        {
+            transform.position = Platform.transform.position;
+        }
     }
 }

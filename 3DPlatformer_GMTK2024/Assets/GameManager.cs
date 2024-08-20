@@ -46,6 +46,12 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         //SceneManager.activeSceneChanged += OnChangedActiveScene;
+
+        //Checking Scenes
+        if(SceneManager.GetActiveScene().name == "Cutscene Begin")
+        {
+            StartCoroutine(StartGameScene());
+        }
     }
 
     private void OnChangedActiveScene(Scene arg0, Scene arg1)
@@ -53,6 +59,12 @@ public class GameManager : MonoBehaviour
         throw new NotImplementedException();
     }
 
+    IEnumerator StartGameScene()
+    {
+        yield return new WaitForSeconds(10);
+        //go to the game scene
+        SceneChange(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 
 #region GameWorld
     public void BulletTime()

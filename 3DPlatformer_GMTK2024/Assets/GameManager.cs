@@ -58,19 +58,21 @@ public class GameManager : MonoBehaviour
 
         SceneManager.activeSceneChanged += ChangedActiveScene;
     }
-    private void Start()
+
+    private void Update()
     {
         //Checking Scenes
         if (SceneManager.GetActiveScene().name == "Cutscene Begin")
         {
             StartCoroutine(StartGameScene());
         }
-
     }
     IEnumerator StartGameScene()
     {
-        yield return new WaitForSeconds(10);
+        Debug.Log("Start Game Scene in 105f");
+        yield return new WaitForSeconds(110f);
         //go to the game scene
+        Debug.Log("GO");
         SceneChange(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

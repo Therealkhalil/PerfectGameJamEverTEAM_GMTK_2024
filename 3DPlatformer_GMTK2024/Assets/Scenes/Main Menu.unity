@@ -156,20 +156,6 @@ MonoBehaviour:
   timeSlowStrength: 0.05
   timeSlowDuration: 1
   m_SceneName: Demo control
-  menuMusic:
-    Guid:
-      Data1: -1609489310
-      Data2: 1133947670
-      Data3: 2108176803
-      Data4: 1792397420
-    Path: event:/Music/Title Music
-  gameplayMusic:
-    Guid:
-      Data1: -367557081
-      Data2: 1168857077
-      Data3: 1657987748
-      Data4: 484626446
-    Path: event:/Music/Music Loop
   SceneAsset: {fileID: 102900000, guid: b29516c4aef6d10499959b1313f4c768, type: 3}
 --- !u!4 &19672236
 Transform:

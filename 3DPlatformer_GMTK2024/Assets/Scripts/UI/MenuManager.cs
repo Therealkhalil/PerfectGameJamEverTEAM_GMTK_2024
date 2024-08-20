@@ -84,7 +84,7 @@ public class MenuManager : MonoBehaviour
             
         }
     }
-
+    
     public void ChangePlayerInputSetting(bool value)
     {
         _input.ChangeCursorInput(value);

@@ -15,6 +15,8 @@ public class ObjectScaling : MonoBehaviour
     // Variables for scaling the object
     [SerializeField] private float scaleSpeed = 0.5f;
     [Range(-5, 5)] public float scaleValue = 0f;
+    public bool isScaling = false;
+
 
     // Check if the object can scale in the X, Y, and Z directions
     [SerializeField] private bool canScaleX;
@@ -53,6 +55,7 @@ public class ObjectScaling : MonoBehaviour
             // Restart the scaling coroutine
             if (scalingCoroutine != null)
             {
+                isScaling = false;
                 StopCoroutine(scalingCoroutine);
             }
             scalingCoroutine = StartCoroutine(ScaleObject());
@@ -75,6 +78,7 @@ public class ObjectScaling : MonoBehaviour
     private IEnumerator ScaleObject()
     {
         float timer = 0f;
+        isScaling = true;
 
         while (timer < 1f)
         {
@@ -99,6 +103,7 @@ public class ObjectScaling : MonoBehaviour
 
             yield return null; // Wait until the next frame before continuing the loop
         }
+        isScaling = false;
 
         // Once scaling is complete, update the initial scale
         initialScale = transform.localScale;

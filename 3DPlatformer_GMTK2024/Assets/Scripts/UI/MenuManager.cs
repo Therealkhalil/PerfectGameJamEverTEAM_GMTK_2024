@@ -19,12 +19,14 @@ public class MenuManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI coinText;
+    [SerializeField] private TextMeshProUGUI gemText;
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private GameObject pauseObj;
     [SerializeField] private GameObject optionObj;
 
     [Header("Setting")]
     private const float MAX_GAMETIME = 300.0f;
+
     [SerializeField] private float gameTime = MAX_GAMETIME;
 
     private void Awake()
@@ -141,5 +143,8 @@ public class MenuManager : MonoBehaviour
     {
         coinText.text = count.ToString();
     }
-    
+    public void SetGemText(int count)
+    {
+        gemText.text = count.ToString();
+    }
 }

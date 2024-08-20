@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Coin
   - Hammer
+  - Gem
   layers:
   - Default
   - TransparentFX

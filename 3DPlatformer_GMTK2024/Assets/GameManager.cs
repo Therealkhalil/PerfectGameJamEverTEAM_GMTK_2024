@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        SceneManager.activeSceneChanged += OnChangedActiveScene;
+        //SceneManager.activeSceneChanged += OnChangedActiveScene;
     }
 
     private void OnChangedActiveScene(Scene arg0, Scene arg1)

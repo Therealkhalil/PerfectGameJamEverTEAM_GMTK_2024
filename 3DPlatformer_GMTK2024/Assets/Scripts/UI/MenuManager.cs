@@ -38,6 +38,7 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(UpdateTimerText());
+        Cursor.lockState = CursorLockMode.Locked;
     }
     
     private void Update()
@@ -46,7 +47,7 @@ public class MenuManager : MonoBehaviour
         {
             _input.escAction = false;
             // Debug.Log("ESC Pressed");
-
+            Cursor.lockState = CursorLockMode.Confined;
             if (!pauseObj.activeSelf)
             {
                 pauseObj.SetActive(true);
@@ -114,6 +115,7 @@ public class MenuManager : MonoBehaviour
         ChangePlayerInputSetting(true);
         
         pauseObj.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
         
     }
     

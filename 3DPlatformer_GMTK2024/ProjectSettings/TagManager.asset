@@ -9,6 +9,9 @@ TagManager:
   - Coin
   - Hammer
   - Gem
+  - Shatterable
+  - Shark
+  - GOAL
   layers:
   - Default
   - TransparentFX

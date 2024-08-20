@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{2745d605-6929-441d-ba1a-f1cf0e54cec6}">
+		<property name="assetPath">
+			<value>SFX/box break.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.6133106575963718</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{54aa86ee-4691-4fb6-b369-4b2214ce4528}</destination>
+		</relationship>
+	</object>
+</objects>

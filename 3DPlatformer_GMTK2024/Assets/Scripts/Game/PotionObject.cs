@@ -20,11 +20,11 @@ public class PotionObject : MonoBehaviour
             Debug.Log("This is scalable object : " + _type);
             if (_type == PotionType.BIGGER && !obj.isScaling )
             {
-                obj.scaleValue += 1f;
+                obj.scaleValue += .5f;
             }
             else if (_type == PotionType.SMALLER && !obj.isScaling )
             {
-                obj.scaleValue -= 1f;
+                obj.scaleValue -= .5f;
             }
             return;
         }

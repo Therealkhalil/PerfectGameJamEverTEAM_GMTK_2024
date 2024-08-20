@@ -9,5 +9,10 @@ public class LookAtPlayer : MonoBehaviour
     void Update()
     {
         transform.LookAt(playerTransform);
+
+        if (CompareTag("GOAL"))
+        {
+            transform.Rotate(0, 180, 0);
+        }
     }
 }

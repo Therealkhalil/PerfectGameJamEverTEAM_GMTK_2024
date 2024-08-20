@@ -12,7 +12,7 @@ public class ShatterObject : MonoBehaviour
     private float[] randoms = { 0, 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f };
     bool Shattered = false;
 
- 
+
     public void ShatterObj(Transform context)
     {
         if (Shattered == true)
@@ -52,7 +52,10 @@ public class ShatterObject : MonoBehaviour
 
         foreach (MeshRenderer renderer in transform.GetComponentsInChildren<MeshRenderer>())
             renderer.enabled = false;
-        GetComponent<BoxCollider>().enabled = false;
+        if(TryGetComponent<Collider>(out Collider tempCol))
+        {
+            tempCol.enabled = false;
+        }
 
         StartCoroutine(KillChildren(newObject));
     }
@@ -68,6 +71,11 @@ public class ShatterObject : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if (transform.tag == "Shatterable" && collision.transform.tag !="Player")
+        {
+            if(collision != null)
+                ShatterObj(collision.transform);
+        }
         if (collision.transform.tag == "Hammer")
             ShatterObj(collision.transform);
     }

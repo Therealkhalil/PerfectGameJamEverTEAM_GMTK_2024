@@ -89,7 +89,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4292513748263231115}
+        m_TargetAssemblyTypeName: OptionManager, Assembly-CSharp
+        m_MethodName: Event_OnSetVolumeMusic
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &296575914248232276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,7 +1411,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4292513748263231115}
+        m_TargetAssemblyTypeName: OptionManager, Assembly-CSharp
+        m_MethodName: Event_OnSetVolumeSFX
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5819862010348882771
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,7 +3535,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3d9ac7439d2c6c94d80dc6bb30cecb26,
+      objectReference: {fileID: 21300000, guid: 761a8ab6c27b9474b987666484619f80,
         type: 3}
     - target: {fileID: 2297370834802915452, guid: b9db2417e29cc41b9bc97932dd6eb989,
         type: 3}
@@ -3823,7 +3847,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b9f3e32d4dc368340adda7548d9b9aba,
+      objectReference: {fileID: 21300000, guid: 25ec1fc9ddfce40e5bf4e88f11d25af8,
         type: 3}
     - target: {fileID: 2297370834802915452, guid: b9db2417e29cc41b9bc97932dd6eb989,
         type: 3}

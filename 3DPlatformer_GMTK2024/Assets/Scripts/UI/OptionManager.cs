@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class OptionManager : MonoBehaviour
 {
@@ -11,9 +12,28 @@ public class OptionManager : MonoBehaviour
     [SerializeField] private Image[] screenButtons;
     [SerializeField] private Sprite[] buttonSprites;
 
+    public FMOD.Studio.VCA Music;
+    public FMOD.Studio.VCA Sound;
+
     private void Start()
     {
+        Invoke("SoundDelay", 1);
+
         UpdateButtonSprites();
+
+    }
+    private void SoundDelay()
+    {
+        Music = FMODUnity.RuntimeManager.GetVCA("vca:/Music");
+        Sound = FMODUnity.RuntimeManager.GetVCA("vca:/Sound");
+    }
+    public void Event_OnSetVolumeMusic(float newVolume)
+    {
+        Music.setVolume(newVolume);
+    }
+    public void Event_OnSetVolumeSFX(float newVolume)
+    {
+        Sound.setVolume(newVolume);
     }
 
     /// <summary>

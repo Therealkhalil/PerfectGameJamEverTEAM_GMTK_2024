@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{db99acbb-0783-4834-8c1a-7467c230c7c1}">
+		<property name="name">
+			<value>Grow</value>
+		</property>
+		<relationship name="folder">
+			<destination>{59c68550-108d-44df-adfa-3851e37cef22}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{91bd747e-45f6-4f42-bbe0-081ed3458a12}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{91bd747e-45f6-4f42-bbe0-081ed3458a12}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<relationship name="automators">
+			<destination>{bbc61224-7901-4d02-8893-26b6db4034bb}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{bbc61224-7901-4d02-8893-26b6db4034bb}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+	</object>
+</objects>

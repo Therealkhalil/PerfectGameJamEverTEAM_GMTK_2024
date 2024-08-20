@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     [Header("Loading Screen")]
     public GameObject loadingScreen;
     public Image loadingBarFill;
+    [SerializeField] public TextMeshProUGUI loadScreenText;
+    public bool renderLoadScreen = true;
 
     [Header("Time Slow")]
     public float timeSlowStrength = 0.05f;
@@ -27,6 +29,8 @@ public class GameManager : MonoBehaviour
     public FMOD.Studio.EventInstance menuMusic;
     public FMOD.Studio.EventInstance gameplayMusic;
     public FMOD.Studio.EventInstance Ambience;
+
+    AsyncOperation operation;
 
     //Honestly forgot why I wanted to validate the main scene...
     //keep this in unless it causes issues for your editor, it won't be in the game build anyway.
@@ -55,20 +59,17 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-
         SceneManager.activeSceneChanged += ChangedActiveScene;
     }
-
-    
+    private void Start()
+    {
+         SceneChange(SceneManager.GetActiveScene().buildIndex + 1);      
+    }
 
     private void ChangedActiveScene(Scene arg1, Scene arg2)
     {
-
         Invoke("MusicSelect", .1f);
-
     }
-
-    
 
     private void MusicSelect()
     {
@@ -97,6 +98,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
     #region GameWorld
     public void BulletTime()
     {
@@ -116,37 +118,15 @@ public class GameManager : MonoBehaviour
         Time.fixedDeltaTime = Time.timeScale * 0.02f;
     }
 
-    public IEnumerator SceneChangeAsyncWDelay(string sceneName, float Time)
+    public void CanChangeScene()
     {
-        Debug.Log("Called");
-        yield return new WaitForSeconds(Time);
-
-        //GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().SaveGame();
-
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
-
-        loadingScreen.SetActive(true);
-
-        while (!operation.isDone)
-        {
-            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-            loadingBarFill.fillAmount = progressValue;
-            yield return null;
-        }
-        loadingScreen.SetActive(false);
-        Debug.Log("New scene loaded");
-
-        //GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().LoadGame();
+        operation.allowSceneActivation = true;
     }
-    public void SceneChange(string sceneName, float Time)
-    {
-        StartCoroutine(SceneChangeAsyncWDelay(sceneName, Time));
-    }
+
     public void SceneChange(string sceneName)
     {
         StartCoroutine(SceneChangeAsync(sceneName));
     }
-
     public void SceneChange(int sceneID)
     {
         StartCoroutine(SceneChangeAsync(sceneID));
@@ -154,56 +134,52 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator SceneChangeAsync(int sceneID)
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneID);
-        
-
-        if(loadingScreen == null)
-        {
-            while (!operation.isDone)
-            {
-                yield return null;
-            }
-            yield break;
-        }
-
-        loadingScreen.SetActive(true);
+        operation = SceneManager.LoadSceneAsync(sceneID);
+        operation.allowSceneActivation = false;    
 
         while (!operation.isDone)
         {
-            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-            loadingBarFill.fillAmount = progressValue;
-            yield return null;      
-        }
+            if (renderLoadScreen)
+            {
+                loadingScreen.SetActive(true);
+                float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+                loadingBarFill.fillAmount = progressValue;
 
-        if(loadingScreen)
+                if (loadScreenText)
+                {
+                    loadScreenText.text = progressValue.ToString() + "%";
+                }
+            }
+           
+            yield return null;
+
+        }
+        if (loadingScreen)
             loadingScreen.SetActive(false);
-        //GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().LoadGame();
     }
+    
     public IEnumerator SceneChangeAsync(string sceneName)
     {
-        Debug.Log("new scene");
-
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
-
-        if (loadingScreen == null)
-        {
-            while (!operation.isDone)
-            {
-                yield return null;
-            }
-            yield break;
-        }
-
-        loadingScreen.SetActive(true);
+        operation = SceneManager.LoadSceneAsync(sceneName);
+        operation.allowSceneActivation = false;
 
         while (!operation.isDone)
         {
-            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-            loadingBarFill.fillAmount = progressValue;
+            if (renderLoadScreen)
+            {
+                loadingScreen.SetActive(true);
+                float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+                loadingBarFill.fillAmount = progressValue;
+
+                if (loadScreenText)
+                {
+                    loadScreenText.text = progressValue.ToString() + "%";
+                }
+            }
             yield return null;
         }
-        loadingScreen.SetActive(false);
-        Debug.Log("new scene loaded");
+        if (loadingScreen)
+            loadingScreen.SetActive(false);
     }
 
     internal float WrapEulerAngles(float rotation)
@@ -225,7 +201,6 @@ public class GameManager : MonoBehaviour
     {
         throw new NotImplementedException();
     }
-
     public void ScenePostLoad()
     {
         throw new NotImplementedException();

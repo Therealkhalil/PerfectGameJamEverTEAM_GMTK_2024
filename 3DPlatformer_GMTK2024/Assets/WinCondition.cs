@@ -1,24 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using FMODUnity;
 
 public class WinCondition : MonoBehaviour
 {
-    public Transform player;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.transform.CompareTag("Player"))
+        Debug.Log("CollisionTriggered");
+        if (other.tag == "Player")
         {
-            GameManager.instance.SceneChangeAsync("Cutscene End");
+            Debug.Log("playerTriggered");
+            GameManager.instance.SceneChange("Cutscene End");
+            GameManager.instance.CanChangeScene();
+            GameManager.instance.renderLoadScreen = true;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3.Distance(transform.position, player.position);
-
     }
 }

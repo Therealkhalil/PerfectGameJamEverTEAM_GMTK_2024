@@ -3,7 +3,32 @@ guid: c7a2899b57333a04ea2c53b4bf0bc563
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pig Eye
+    second: {fileID: 2100000, guid: 116e9c40fbd047e4eb862c93b194584e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pig Eye1
+    second: {fileID: 2100000, guid: b66d2b0e330abcf47ba285d05cdd3d74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pig Nose
+    second: {fileID: 2100000, guid: 0bfe245dddba7b24799f10224aab9266, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wizard Hat
+    second: {fileID: 2100000, guid: fca81964c07b9714d8e8199cb1362926, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wizard Hat_copy1
+    second: {fileID: 2100000, guid: 37e3ee64f03202b4faeeba51f6742492, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

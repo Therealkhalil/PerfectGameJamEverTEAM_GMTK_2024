@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        GameManager.instance.SceneChange(SceneManager.GetActiveScene().buildIndex + 1);
+        GameManager.instance.CanChangeScene();
     }
 
     private void OptionsMenu()

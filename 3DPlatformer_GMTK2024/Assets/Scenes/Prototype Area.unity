@@ -18066,7 +18066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d188a11eed3dd44bafc0afdd5ad557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleSpeed: 0.1
+  scaleSpeed: 0.2
   scaleValue: 1
   isScaling: 0
   canScaleX: 1

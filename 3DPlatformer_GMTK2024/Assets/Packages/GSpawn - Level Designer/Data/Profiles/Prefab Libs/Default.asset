@@ -248,39 +248,6 @@ MonoBehaviour:
   _surfaceSnapAppliedOffsetFromSurface: 0
   _modelSize: {x: 155.9589, y: 1.785138, z: 155.9589}
   _uiSelected: 0
---- !u!114 &-6737453277075981434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bfdaf7f2c4c1d04580d676ed3717f21, type: 3}
-  m_Name: Shark
-  m_EditorClassIdentifier: 
-  _guid:
-    _guidString: 3ed9d4e6-67f7-496d-a2d3-3a9604afa55b
-  _prefabAsset: {fileID: 738230686295234748, guid: 97fb5a7151fcd3f4eb6ccae80e6dfb5b,
-    type: 3}
-  _preview:
-    _prefabAsset: {fileID: 738230686295234748, guid: 97fb5a7151fcd3f4eb6ccae80e6dfb5b,
-      type: 3}
-    _texture: {fileID: 0}
-    _yaw: 0
-    _pitch: 0
-  _sceneToObjectGroup:
-    _serializedKeys: []
-    _serializedValues: []
-  _spawnGuideTransformTRS:
-    _position: {x: 5.3, y: -2.47, z: 26.934013}
-    _rotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-    _scale: {x: 50, y: 49.999992, z: 49.999992}
-  _modularSnapVerticalStep: 0
-  _surfaceSnapAppliedOffsetFromSurface: 0
-  _modelSize: {x: 3.4999995, y: 29.569998, z: 3.007637}
-  _uiSelected: 0
 --- !u!114 &-6537133277750385547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1679,7 +1646,6 @@ MonoBehaviour:
   - {fileID: 503101468708902742}
   - {fileID: -2705386229057397944}
   - {fileID: 7013264498083801981}
-  - {fileID: -6737453277075981434}
   - {fileID: -7069927171634293176}
   - {fileID: -5664861019035330161}
   - {fileID: -2441979532385663167}

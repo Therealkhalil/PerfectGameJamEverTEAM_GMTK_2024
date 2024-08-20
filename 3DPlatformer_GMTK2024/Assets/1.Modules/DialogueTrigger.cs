@@ -33,6 +33,8 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        TriggerDialogue();
+        if (other.gameObject.CompareTag("Player")) {
+            TriggerDialogue();
+        }
     }
 }

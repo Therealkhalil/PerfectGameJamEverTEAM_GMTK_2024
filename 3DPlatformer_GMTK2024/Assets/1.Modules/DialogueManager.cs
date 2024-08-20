@@ -17,7 +17,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject continueIcon;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI nameText;
-    [SerializeField] private GameObject nameFrame;
     [SerializeField] private Animator imageAnimator;
     
 
@@ -211,11 +210,6 @@ public class DialogueManager : MonoBehaviour
 
             switch (tagKey) {
                 case NAME_TAG:
-                    if (tagValue == "none") {
-                        nameFrame.SetActive(false);
-                    } else {
-                        nameFrame.SetActive(true);
-                    }
                     nameText.text = tagValue;
                     break;
                 case IMAGE_TAG:

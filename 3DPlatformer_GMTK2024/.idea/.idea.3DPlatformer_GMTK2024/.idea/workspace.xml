@@ -7,16 +7,18 @@
     <list default="true" id="9d0293eb-623c-401b-888c-3418631402fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3DPlatformer_GMTK2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3DPlatformer_GMTK2024/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1.Modules/Dialogue/Dialogue.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Modules/Dialogue/Dialogue.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Modules/Dialogue/gid_img.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Modules/Dialogue/gid_img.anim.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1.Modules/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Modules/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1.Modules/DialogueTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Modules/DialogueTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueScripts/Jump.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueScripts/Jump.ink" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueScripts/Jump.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueScripts/Jump.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Modules/bob_img.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Modules/bob_img.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Modules/viv_img.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Modules/viv_img.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/StarterAssets/InputSystem/StarterAssetsInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/StarterAssets/InputSystem/StarterAssetsInputs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dialogues.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dialogues.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Assets/Dialogue Boxes/Dialogue Box.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/super-comic-font/SuperComic-button.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/super-comic-font/SuperComic-button.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/InkSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InkSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,26 +42,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/dialogue",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/dialogue&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\yuna9\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\yuna9\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\yuna9\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\yuna9\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\yuna9\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\yuna9\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.42f1/Unity.app/Contents/MacOS/Unity" />
@@ -128,7 +130,7 @@
       <workItem from="1724029437082" duration="634000" />
       <workItem from="1724034016306" duration="4251000" />
       <workItem from="1724049925969" duration="3127000" />
-      <workItem from="1724160369449" duration="1904000" />
+      <workItem from="1724160369449" duration="4411000" />
     </task>
     <servers />
   </component>

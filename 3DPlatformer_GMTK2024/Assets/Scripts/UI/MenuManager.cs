@@ -14,8 +14,10 @@ public class MenuManager : MonoBehaviour
     [Header("Input System")]
     [SerializeField]
     private GameObject player;
-    private PlayerController _playerInput;
+    private PlayerController _playerController;
     private StarterAssetsInputs _input;
+    private ThrowingController _throwingController;
+    private bool _isDialogueOn = false;
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI coinText;
@@ -31,8 +33,9 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
-        _playerInput = player.GetComponent<PlayerController>();
+        _throwingController = player.GetComponent<ThrowingController>();
         _input = player.GetComponent<StarterAssetsInputs>();
+        _playerController = player.GetComponent<PlayerController>();
     }
 
     private void Start()
@@ -87,8 +90,19 @@ public class MenuManager : MonoBehaviour
     
     public void ChangePlayerInputSetting(bool value)
     {
-        _input.ChangeCursorInput(value);
-        _playerInput.enabled = value; 
+        if (!_isDialogueOn)
+        {
+            _input.ChangeCursorInput(value);
+            _playerController.enabled = value;
+        }
+    }
+
+    public void SetDialogueBool(bool value)
+    {
+        _throwingController.enabled = false;
+        _input.ChangeCursorInput(!value);
+        _playerController.enabled = !value;
+        _isDialogueOn = value;
     }
     
     public void Event_CloseOption()

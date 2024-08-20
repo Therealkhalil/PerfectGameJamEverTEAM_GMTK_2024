@@ -4,10 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Ink.Runtime;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] private MenuManager _menuManager;
+    
     [Header("Params")]
     // 작을 수록 더 빠른 타이밍 스피드
     [SerializeField] private float typingSpeed = BASIC_TYPE_SPEED;
@@ -16,10 +19,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueCanvas;
     [SerializeField] private GameObject continueIcon;
     [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private TextMeshProUGUI nameText;
+    // [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private Animator imageAnimator;
     
-
     [Header("Game")]
     // [SerializeField] private Button goAreaButton;
     [SerializeField] private Button touchAreaButton;
@@ -90,8 +92,8 @@ public class DialogueManager : MonoBehaviour
         if (knotName != null) {
             currentStory.ChoosePathString(knotName);
         }
-        
-        menuManager.ChangePlayerInputSetting(false);
+
+        menuManager.SetDialogueBool(true);
 
         /*
         currentStory.BindExternalFunction ("OnUnlockSlot", () => {
@@ -120,7 +122,7 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.SetActive(true);
         
         // reset
-        nameText.text = "";
+        // nameText.text = "";
         imageAnimator.Play("default");
 
         ContinueStory();
@@ -210,7 +212,7 @@ public class DialogueManager : MonoBehaviour
 
             switch (tagKey) {
                 case NAME_TAG:
-                    nameText.text = tagValue;
+                    // nameText.text = tagValue;
                     break;
                 case IMAGE_TAG:
                     try
@@ -241,14 +243,14 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialogueCanvas.SetActive(false);
         dialogueText.text = "";
-        
-        menuManager.ChangePlayerInputSetting(true);
-        
+
+        menuManager.SetDialogueBool(false);
+
         // goAreaButton.gameObject.SetActive(true);
 
         // 대화 저장
         // dialogueVariables.SaveVariables();
-        
+
     }
 
     // Click choice button / -1 : from external function

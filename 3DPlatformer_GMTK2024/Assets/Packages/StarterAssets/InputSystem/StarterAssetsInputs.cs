@@ -81,6 +81,11 @@ namespace StarterAssets
 			SetCursorState(val);
 			cursorInputForLook = val;
 		}
+
+		public void ChangeMouseInput(bool val)
+		{
+			
+		}
 		
 		public void MoveInput(Vector2 newMoveDirection)
         {

@@ -220,7 +220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 1476152784213638988}
   loadingBarFill: {fileID: 171110459616024216}
-  loadScreenText: {fileID: 2307704549764287133}
   timeSlowStrength: 0.05
   timeSlowDuration: 1
   m_SceneName: 

@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     [Header("Loading Screen")]
     public GameObject loadingScreen;
     public Image loadingBarFill;
+    [SerializeField] public TextMeshProUGUI loadScreenText;
+    bool renderLoadScreen = true;
+    bool playSelected;
 
     [Header("Time Slow")]
     public float timeSlowStrength = 0.05f;
@@ -58,29 +61,19 @@ public class GameManager : MonoBehaviour
 
         SceneManager.activeSceneChanged += ChangedActiveScene;
     }
-
-    private void Update()
+    private void Start()
     {
         //Checking Scenes
         if (SceneManager.GetActiveScene().name == "Cutscene Begin")
         {
-            StartCoroutine(StartGameScene());
+            SceneChange(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
-    IEnumerator StartGameScene()
-    {
-        Debug.Log("Start Game Scene in 105f");
-        yield return new WaitForSeconds(110f);
-        //go to the game scene
-        Debug.Log("GO");
-        SceneChange(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+
 
     private void ChangedActiveScene(Scene arg1, Scene arg2)
     {
-
         Invoke("MusicSelect", .1f);
-
     }
 
     private void MusicSelect()
@@ -134,9 +127,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("Called");
         yield return new WaitForSeconds(Time);
 
-        //GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().SaveGame();
-
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        operation.allowSceneActivation = false;
 
         loadingScreen.SetActive(true);
 
@@ -149,7 +141,7 @@ public class GameManager : MonoBehaviour
         loadingScreen.SetActive(false);
         Debug.Log("New scene loaded");
 
-        //GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().LoadGame();
+
     }
     public void SceneChange(string sceneName, float Time)
     {
@@ -168,9 +160,9 @@ public class GameManager : MonoBehaviour
     public IEnumerator SceneChangeAsync(int sceneID)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneID);
-        
+        operation.allowSceneActivation = false;
 
-        if(loadingScreen == null)
+        if (loadingScreen == null)
         {
             while (!operation.isDone)
             {
@@ -183,15 +175,31 @@ public class GameManager : MonoBehaviour
 
         while (!operation.isDone)
         {
-            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-            loadingBarFill.fillAmount = progressValue;
-            yield return null;      
+            if (renderLoadScreen)
+            {
+                float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+                loadingBarFill.fillAmount = progressValue;
+
+                if (loadScreenText)
+                {
+                    loadScreenText.text = progressValue.ToString() + "%";
+                }
+            }
+           
+            yield return null;
+
+            if (loadingScreen)
+                loadingScreen.SetActive(false);
+
+        }
+        if (playSelected)
+        {
+            operation.allowSceneActivation = true;
+        }
+            
         }
 
-        if(loadingScreen)
-            loadingScreen.SetActive(false);
-        //GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().LoadGame();
-    }
+        
     public IEnumerator SceneChangeAsync(string sceneName)
     {
         Debug.Log("new scene");

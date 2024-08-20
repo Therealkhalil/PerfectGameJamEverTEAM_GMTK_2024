@@ -42,5 +42,11 @@ public class PlatformAnimator : MonoBehaviour
         if (currentWaypoint >= waypoints.Count && loopable)
             currentWaypoint = 0;
         StartCoroutine(LerpValue(transform.position, waypoints[currentWaypoint].position));
+
+        if (transform.CompareTag("Shark"))
+        {
+            transform.LookAt(waypoints[currentWaypoint].position);
+            transform.Rotate(-90,0,0);
+        }
     }
 }

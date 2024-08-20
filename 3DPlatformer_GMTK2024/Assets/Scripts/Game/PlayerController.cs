@@ -87,7 +87,7 @@ namespace StarterAssets
         public float DashCoolDown = 1.0f;
         private bool isDash = false;
         private bool _readyToDash = true;
-        
+
         // Coyote Time
         public float coyoteTime = 0.2f;
         private float coyoteCounter;
@@ -128,6 +128,9 @@ namespace StarterAssets
 
         private bool _hasAnimator;
 
+        public GameObject animatedObject;
+        Animator anim;
+
         private bool IsCurrentDeviceMouse
         {
             get
@@ -155,6 +158,9 @@ namespace StarterAssets
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
             
             _hasAnimator = TryGetComponent(out _animator);
+
+            animatedObject.TryGetComponent(out anim);
+
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM 
@@ -164,7 +170,6 @@ namespace StarterAssets
 #endif
 
             AssignAnimationIDs();
-
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
@@ -246,7 +251,10 @@ namespace StarterAssets
             if (_input.move == Vector2.zero)
             {
                 targetSpeed = 0.0f;
+                anim.SetBool("isMoving", false);
             }
+            else
+                anim.SetBool("isMoving", true);
 
             // a reference to the players current horizontal velocity
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;

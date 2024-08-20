@@ -37,14 +37,15 @@ MonoBehaviour:
   m_Name: PluginPrefabManagerUI_PrefabViewState
   m_EditorClassIdentifier: 
   selectedItems:
-    _serializedList: []
+    _serializedList:
+    - _guidString: 0ad55d94-72a1-4dac-95ea-6ba8cd2b7860
   selectRangeBeginId:
-    _guidString: 8d777bfe-d0d4-42ec-9019-949fd0cc64fb
+    _guidString: 0ad55d94-72a1-4dac-95ea-6ba8cd2b7860
   selectRangeEndId:
-    _guidString: 8d777bfe-d0d4-42ec-9019-949fd0cc64fb
-  hasSelectRange: 0
-  scrollOffset: {x: 0, y: 0}
-  vertScrollHighValue: 301
+    _guidString: 0ad55d94-72a1-4dac-95ea-6ba8cd2b7860
+  hasSelectRange: 1
+  scrollOffset: {x: 0, y: 648}
+  vertScrollHighValue: 1279
   vertScrollLowValue: 0
 --- !u!114 &11400000
 MonoBehaviour:

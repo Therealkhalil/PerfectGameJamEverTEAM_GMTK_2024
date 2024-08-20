@@ -12,13 +12,9 @@ public class WinCondition : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             GameManager.instance.SceneChangeAsync("Cutscene End");
+            GameManager.instance.CanChangeScene();
+            GameManager.instance.renderLoadScreen = true;
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3.Distance(transform.position, player.position);
-
-    }
 }

@@ -19,6 +19,9 @@ public class PotionThrow : MonoBehaviour
     private SphereCollider _sphereCollider;
     private Rigidbody _rigidbody;
 
+    public FMODUnity.EventReference growSound;
+    public FMODUnity.EventReference shrinkSound;
+
     private void Update()
     {
         RepositionObject();

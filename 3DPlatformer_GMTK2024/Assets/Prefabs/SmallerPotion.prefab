@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 990875740384945892}
   - component: {fileID: 6696288643720974252}
   - component: {fileID: 2377809813435358181}
+  - component: {fileID: 9036505305673235934}
   m_Layer: 0
   m_Name: SmallerPotion
-  m_TagString: Untagged
+  m_TagString: Shatterable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +97,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 1
+--- !u!114 &9036505305673235934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878289361094328218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f945cc1a7cce62408f5a58d561431d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brokenPrefab: {fileID: 3121501960123203237, guid: 1ceb1cf4f8fd9b846b1fa6f1e30511ac,
+    type: 3}
+  UseAdditionalUpForce: 0
+  shatterForce: 10
 --- !u!1001 &966404651841830540
 PrefabInstance:
   m_ObjectHideFlags: 0

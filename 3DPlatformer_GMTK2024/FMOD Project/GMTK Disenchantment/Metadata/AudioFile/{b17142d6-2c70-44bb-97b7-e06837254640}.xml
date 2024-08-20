@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{b17142d6-2c70-44bb-97b7-e06837254640}">
+		<property name="assetPath">
+			<value>Music/GMTK theme shrink.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>81.111104166666664</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{54aa86ee-4691-4fb6-b369-4b2214ce4528}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{01e227b6-4e4c-4a27-b141-fa94b7a2c522}">
+		<property name="name">
+			<value>Shrink</value>
+		</property>
+		<relationship name="folder">
+			<destination>{59c68550-108d-44df-adfa-3851e37cef22}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{646f0dca-c6a7-4118-a286-6abbc5b53fc8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{646f0dca-c6a7-4118-a286-6abbc5b53fc8}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

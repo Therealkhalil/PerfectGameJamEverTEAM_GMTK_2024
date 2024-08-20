@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using FMODUnity;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,8 +23,14 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private string m_SceneName;
 
+    [Header("FMOD Music")]
+    public FMOD.Studio.EventInstance menuMusic;
+    public FMOD.Studio.EventInstance gameplayMusic;
+    public FMOD.Studio.EventInstance Ambience;
+
     //Honestly forgot why I wanted to validate the main scene...
     //keep this in unless it causes issues for your editor, it won't be in the game build anyway.
+
 #if UNITY_EDITOR
     public UnityEditor.SceneAsset SceneAsset;
     private void OnValidate()
@@ -34,31 +41,32 @@ public class GameManager : MonoBehaviour
         }
     }
 #endif
+
     private void Awake()
     {
-        if (instance != null)
-            Destroy(this);
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-        instance = this;
+        DontDestroyOnLoad(gameObject);
 
-        DontDestroyOnLoad(this.gameObject);
+        SceneManager.activeSceneChanged += ChangedActiveScene;
     }
     private void Start()
     {
-        //SceneManager.activeSceneChanged += OnChangedActiveScene;
-
         //Checking Scenes
-        if(SceneManager.GetActiveScene().name == "Cutscene Begin")
+        if (SceneManager.GetActiveScene().name == "Cutscene Begin")
         {
             StartCoroutine(StartGameScene());
         }
-    }
 
-    private void OnChangedActiveScene(Scene arg0, Scene arg1)
-    {
-        throw new NotImplementedException();
     }
-
     IEnumerator StartGameScene()
     {
         yield return new WaitForSeconds(10);
@@ -66,7 +74,41 @@ public class GameManager : MonoBehaviour
         SceneChange(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-#region GameWorld
+    private void ChangedActiveScene(Scene arg1, Scene arg2)
+    {
+
+        Invoke("MusicSelect", .1f);
+
+    }
+
+    private void MusicSelect()
+    {
+        Debug.Log("Music Select");
+        FMODUnity.RuntimeManager.GetBus("bus:/").stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            gameplayMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Music Loop");
+
+            Debug.Log("Gameplay Select");
+            gameplayMusic.setParameterByName("Grow", 0.5f);
+            gameplayMusic.start();
+            gameplayMusic.release();
+
+            Ambience = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Forest Ambience");
+            Ambience.start();
+            Ambience.release();
+        }
+        else
+        {
+            menuMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Title Music");
+
+            menuMusic.start();
+            menuMusic.release();
+        }
+
+    }
+    #region GameWorld
     public void BulletTime()
     {
         Time.timeScale = timeSlowStrength;
@@ -124,8 +166,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator SceneChangeAsync(int sceneID)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneID);
-
-        //GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().SaveGame();
+        
 
         if(loadingScreen == null)
         {
@@ -142,11 +183,11 @@ public class GameManager : MonoBehaviour
         {
             float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
             loadingBarFill.fillAmount = progressValue;
-            yield return null;
+            yield return null;      
         }
 
-
-        loadingScreen.SetActive(false);
+        if(loadingScreen)
+            loadingScreen.SetActive(false);
         //GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().LoadGame();
     }
     public IEnumerator SceneChangeAsync(string sceneName)
